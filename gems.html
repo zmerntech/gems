@@ -1,0 +1,599 @@
+<title>opalmine</title>
+<body style="margin: 5rem">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+*{
+color:rgb(0, 0, 0);
+}
+</style>
+<style>
+img{
+max-width:100%
+}
+</style>
+<style type="text/css">
+*{
+box-sizing:border-box;
+}
+body{
+padding:0;
+margin:0;
+}
+.page{
+width:100%;
+float:left;
+background-image: radial-gradient(circle at center center, #ffffff 91%, #ccd1d5 91%); background-size: 15px 15px;
+overflow:auto;
+}
+.page .nav{
+width:100%;
+background:#32BCE5;
+/* background:url(https://i.imgur.com/jgUMPYl.jpg);
+*/
+background-size:100% 100%;
+padding: 3px 0;
+}
+.page .nav ul{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+@media(max-width:1024px) {
+.page .nav ul{ justify-content:center;
+}
+} @media(max-width:720px) {
+.page .nav ul{ flex-direction:column;
+justify-content:center; align-items:center;
+}
+} .nav ul li{
+list-style:none;
+color:white;
+font-size:15px;
+font-weight: lighter;
+margin:0 30px;
+}
+.nav ul li a{
+text-decoration:none;
+color: white;
+text-transform:capitalize;
+font-family:sans-serif;
+transition:0.5s;
+position:relative;
+}
+.nav ul li a:hover{
+color:white !important;
+transition:0.9s;
+}
+.nav ul li a:after{
+    content: '';
+    position:absolute;
+    left:50%;
+    bottom:-10px;
+    -webkit-transform: translateX(-50%) scaleX(0);
+    transform: translateX(-50%) scaleX(0);
+    
+    -webkit-transform-origin:50% 50%;
+    transform-origin:50% 50%;
+    
+    width:130%;
+    height:2px;
+    background-color:white;
+    -webkit-transition:transform 250ms;
+    transition:transform 300ms;
+    
+}
+.nav ul li a:hover:after{
+    -webkit-transform:translateX(-50%) scaleX(1);
+    transform:translateX(-50%) scaleX(1);
+    
+}
+.title{
+color:white;
+font-family:sans-serif;
+text-align:right;
+padding-right:20px;
+}
+.info{
+color:black;
+text-align:justify;
+font-size:20px;
+line-height:1.5;
+padding:0 50px;
+font-weight: lighter;
+}
+</style>
+	
+<style type="text/css">
+.opal-creation-logo{
+width:100%;
+float:left;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+}
+.opal-creation-logo h1{
+color:white;
+line-height:1.5;
+font-size:90px;
+width:100%;
+text-align:center;
+font-family: 'Cinzel Decorative', cursive;
+
+background:linear-gradient(#BB2CD9,#BB2CD9,#BB2CD9,#2B2B52,#01CBC6,#2B2B52,#01CBC6,#2B2B52,#BB2CD9,#BB2CD9,#BB2CD9);
+-webkit-text-fill-color:transparent;-webkit-background-clip:text;
+}
+.diamond_icon{
+display:inline-block;
+width:100px;
+height:90px;
+background:url(https://i.imgur.com/kWrkehA.png);
+background-size:100% 100%;
+margin-bottom:-15px;
+
+}
+@media(max-width:1080px) {
+.opal-creation-logo h1{font-size:70px;
+}
+.diamond_icon{
+width:90px;
+height:80px;
+}
+} @media(max-width:720px) {
+.opal-creation-logo h1{font-size:50px;
+}
+.diamond_icon{
+width:75px;
+height:65px;
+}
+} </style>
+
+
+
+
+<style type="text/css">
+
+.des-title-box-top{
+width:100%;
+/* background: url(https://i.imgur.com/jgUMPYl.jpg);
+*/
+background-size:100% 100%;
+padding:8px 0;
+background:#32BCE5;
+}
+.des-title-box-top h2{
+color:white;
+padding:0;
+margin:0;
+text-align:center;font-family: 'Caveat', cursive;font-weight:normal;
+}
+.des-title-box-bottom{
+width:100%;
+margin-top:2.5rem;
+/* border:0.1px solid transparent;
+border-top:none;
+border-image:linear-gradient(45deg,#ff0,#f0f,#f00,#00f,#0f0);
+border-image-slice:1;
+*/
+padding:10px 5px;
+float:left; color:white; font-family:sans-serif;
+}
+.des-title-box-bottom *{
+padding:0;
+margin:0
+}
+.des-det-lb,.des-det-rb{
+width:30%;
+padding-left:10px;
+padding-top:7px;
+padding-bottom:7px;
+box-shadow:0px 0px 4px grey;
+float:left;
+margin-bottom:10px;
+}
+.des-det-lb{
+margin-right:10px
+}
+.des-det-rb{
+width:66%
+}
+.des-title-box-bottom p{
+font-size:13px;
+font-weight:bold;
+}
+.des-image{
+    margin-top: 3.5rem;
+    margin-left: 5rem;
+    
+}
+
+
+
+
+</style>
+
+
+<style type="text/css">
+.sat-cle-con{
+width:100%; overflow:auto; display: inline-block;justify-content: center; flex-wrap:wrap;
+}
+.sat-con{
+width:100%;
+/* border:0.1px solid transparent;
+border-top:none;
+border-image:linear-gradient(45deg,#ff0,#f0f,#f00,#00f,#0f0);
+border-image-slice:1;
+*/
+color:white;
+}
+.sat-con-title{
+width:100%;
+height:53px;
+/* background:url(https://i.imgur.com/yLsxYzn.jpg);
+*/
+background:#32BCE5;
+}
+.sat-con-details{
+background:#EAF0F1;
+}
+.sat-con-title h2{
+color:white;
+padding:0;
+margin:0;
+text-align:center;
+font-family: 'Caveat', cursive;
+font-weight:normal;
+padding-top:10px;
+}
+.sat-cle-con p{
+font-weight:lighter;
+font-family:sans-serif;
+padding:10px 10px;
+font-size:18px;
+line-height:1.5;
+text-align:justify;
+margin:0;
+}
+</style>
+<body>
+<div class="opal-creation-logo">	<h1>jaipuropalking<span class="diamond_icon"></span></h1>	</div>
+<div class="page">
+    <nav class="nav">
+    <ul>
+    <li>	<a href="#" target="_blank">feedback</a>	</li>
+    <li>	<a href="#" target="_blank">other item</a>	</li>
+    <li>	<a href="#" target="_blank">add fovarite</a>	</li>
+    <li>	</li>
+    <li>	<a href="#" target="_blank">visit store</a>	</li>
+    <li>	</li>
+    <li>	<a href="#" target="_blank">contact us</a>	</li>
+    </ul>
+    </nav>
+<h2 class="info">	We provide the best high quality natural gemstone from natural mine, Truly present, Easy & Secure online shopping. Customer Service : Your question message will be speed reply within 24 hours. All my Gemstone are from 100% Natural mine, Not Lab Created or Hydrothermal Quartz. Please feel confidence to shop & make your offer in our store.	</h2>
+
+<div class="left-box">
+    <div class="des-title-box-top">	<h2>Description</h2>	</div>
+
+<div style="width:100%;">
+    <div class="des-image"style="width:20%; float:left;">  <img src="https://i.imgur.com/U28infT.jpg" ></div>
+
+    <div style="width:55%; float:left; margin-right: 2rem;margin-top: 3.5rem;" >
+        <div>
+<h1 style="margin-left:2rem; font-weight: inherit;margin:0;padding:0;margin-left: 2rem;">Information</h1>
+<p style="text-align:justify; margin-left: 2rem; font-size:20px;line-height:2;"><i class="fa fa-check-square-o"></i>  All our stone are 100% top quality opal.<br><i class="fa fa-check-square-o"></i>
+If need any more info about this item.<br><i class="fa fa-check-square-o"></i>
+Please feel free contact us by massage we will reply with in 24 hours.<br><i class="fa fa-check-square-o"></i>
+You can bid or make your offer with 100% confidence in our store.   </p>
+</div>
+        
+  </div>
+  <div style="clear: both;"></div>
+  
+
+	
+
+<div class="des-title-box-bottom">  <div class="des-det-lb">
+            <p>Type</p>
+            </div>
+            <div class="des-det-rb">
+            <p>100% Natural Opal</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Weight</p>
+            </div>
+            <div class="des-det-rb">
+            <p>About 0.450 - 0.750ct each pc</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Size</p>
+            </div>
+            <div class="des-det-rb">
+            <p>8x6 mm</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Shape</p>
+            </div>
+            <div class="des-det-rb">
+            <p>Pear Cut</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Quantity</p>
+            </div>
+            <div class="des-det-rb">
+            <p>1 pcs</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Color</p>
+            </div>
+            <div class="des-det-rb">
+            <p>Multi Color (White)</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Clarity</p>
+            </div>
+            <div class="des-det-rb">
+            <p>VVS-IF</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Luster</p>
+            </div>
+            <div class="des-det-rb">
+            <p>Excellent</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Hardness</p>
+            </div>
+            <div class="des-det-rb">
+            <p>5.5 - 6.5</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Origin</p>
+            </div>
+            <div class="des-det-rb">
+            <p>Ethiopia</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Treatment</p>
+            </div>
+            <div class="des-det-rb">
+            <p>None (100% Natural)</p>
+            </div>
+            <div class="des-det-lb">
+            <p>Product No</p>
+            </div>
+            <div class="des-det-rb">
+            <p>None</p>
+            </div>
+</div>
+
+</div>
+</div>	
+
+</div> 
+
+
+
+
+
+
+<div id="more_products_con" style="float:left;box-sizing:border-box;width:100%;font-family:sans-serif;border:2px solid #32BCE5;padding:30px 0;background-image: radial-gradient(circle at center center, #ffffff 91%, #ccd1d5 91%); background-size: 15px 15px;border-bottom:none;">
+    <h1 style="float:left;width:100%;text-align:center;padding:0;margin:0;margin-bottom:20px;"> More Products</h1>
+
+    <div style="width:100%;float:left;display:flex;justify-content:space-around;align-items:center;flex-wrap: wrap;">
+
+        <div style="width:280px;height:350px;box-shadow:0px 2px 4px grey;position:relative;text-align:center;margin:20px">
+            <img src="https://i.imgur.com/U28infT.jpg" style="width:100%;margin-bottom:25px;position:absolute;top:0;left:0">
+            <a style="text-decoration: none;border:1px solid black;padding:5px 20px;font-weight:bold;position:absolute;bottom:15px;left:50%;transform:translateX(-50%);" href="#">Buy now</a>
+        </div>
+
+        <div style="width:280px;height:350px;margin:20px;box-shadow:0px 2px 4px grey;position:relative;text-align:center;">
+            <img src="https://i.imgur.com/U28infT.jpg" style="width:100%;margin-bottom:25px;position:absolute;top:0;left:0">
+            <a style="text-decoration: none;border:1px solid black;padding:5px 20px;font-weight:bold;position:absolute;bottom:15px;left:50%;transform:translateX(-50%);" href="#">Buy now</a>
+        </div>
+
+        <div style="width:280px;height:350px;margin:20px;box-shadow:0px 2px 4px grey;position:relative;text-align:center;">
+            <img src="https://i.imgur.com/U28infT.jpg" style="width:100%;margin-bottom:25px;position:absolute;top:0;left:0">
+            <a style="text-decoration: none;border:1px solid black;padding:5px 20px;font-weight:bold;position:absolute;bottom:15px;left:50%;transform:translateX(-50%);" href="#">Buy now</a>
+        </div>
+
+        <div style="width:280px;height:350px;margin:20px;box-shadow:0px 2px 4px grey;position:relative;text-align:center;">
+            <img src="https://i.imgur.com/U28infT.jpg" style="width:100%;margin-bottom:25px;position:absolute;top:0;left:0">
+            <a style="text-decoration: none;border:1px solid black;padding:5px 20px;font-weight:bold;position:absolute;bottom:15px;left:50%;transform:translateX(-50%);" href="#">Buy now</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="more_products_con" style="float:left;box-sizing:border-box;width:100%;font-family:sans-serif;border:2px solid #32BCE5;padding:30px 0;background-image: radial-gradient(circle at center center, #ffffff 91%, #ccd1d5 91%); background-size: 15px 15px;margin-bottom:30px;border-top:none;">
+    
+
+    <div style="width:100%;float:left;display:flex;justify-content:space-around;align-items:center;flex-wrap: wrap;">
+
+        <div style="width:280px;height:350px;box-shadow:0px 2px 4px grey;position:relative;text-align:center;margin:20px">
+            <img src="https://i.imgur.com/U28infT.jpg" style="width:100%;margin-bottom:25px;position:absolute;top:0;left:0">
+            <a style="text-decoration: none;border:1px solid black;padding:5px 20px;font-weight:bold;position:absolute;bottom:15px;left:50%;transform:translateX(-50%);" href="#">Buy now</a>
+        </div>
+
+        <div style="width:280px;height:350px;margin:20px;box-shadow:0px 2px 4px grey;position:relative;text-align:center;">
+            <img src="https://i.imgur.com/U28infT.jpg" style="width:100%;margin-bottom:25px;position:absolute;top:0;left:0">
+            <a style="text-decoration: none;border:1px solid black;padding:5px 20px;font-weight:bold;position:absolute;bottom:15px;left:50%;transform:translateX(-50%);" href="#">Buy now</a>
+        </div>
+
+        <div style="width:280px;height:350px;margin:20px;box-shadow:0px 2px 4px grey;position:relative;text-align:center;">
+            <img src="https://i.imgur.com/U28infT.jpg" style="width:100%;margin-bottom:25px;position:absolute;top:0;left:0">
+            <a style="text-decoration: none;border:1px solid black;padding:5px 20px;font-weight:bold;position:absolute;bottom:15px;left:50%;transform:translateX(-50%);" href="#">Buy now</a>
+        </div>
+
+        <div style="width:280px;height:350px;margin:20px;box-shadow:0px 2px 4px grey;position:relative;text-align:center;">
+            <img src="https://i.imgur.com/U28infT.jpg" style="width:100%;margin-bottom:25px;position:absolute;top:0;left:0">
+            <a style="text-decoration: none;border:1px solid black;padding:5px 20px;font-weight:bold;position:absolute;bottom:15px;left:50%;transform:translateX(-50%);" href="#">Buy now</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="sat-cle-con">	<div class="sat-con" style="margin-right:20px;">	<div class="sat-con-title">	<h2>Satisfaction</h2>	</div>
+<div class="sat-con-details">
+<p>	Do not waste time and money buying low quality gemstone with no collection value.</br>	Color gemstone carry only the jewelry and collection gemstone with most desired and valuable color with great lucter and cutting.</p>
+</div>
+</div>
+<div class="sat-con" style="height:auto;margin-top:auto;">	<div class="sat-con-title">	<h2>Clarity Scale</h2>	</div>
+<div class="sat-con-details">
+<p>	IF: Internally flawless; Free of inclusions.<br>
+VVS: Very Very Slight Inclusion; Inclusion barely seen under 10x loop<br>
+VS: Very slight inclusion; Inclusion can be seen under 10x loop	</p>
+</div>
+</div>
+<!-- <img src="https://i.imgur.com/yLsxYzn.jpg"> -->
+</div>
+<style type="text/css">
+.policy-con{
+padding:10px 0;
+float:left;
+width:100%;
+margin:20px 0;
+}
+</style>
+<div class="policy-con" style="background-image: radial-gradient(circle at center center, rgb(41, 125, 58) 0%, rgb(41, 125, 58) 11%,transparent 11%, transparent 100%),linear-gradient(90deg, hsl(37,14%,9%),hsl(37,14%,9%)); background-size: 11px 11px;">	<img src="https://i.imgur.com/Jr6kCkS.png">	</div>
+<style type="text/css">
+.payment-con{
+float:left;
+/* border:2px solid white;
+*/
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+width:100%;
+padding-bottom:20px;
+color:white;
+}
+.payment-con-top{
+width:100%;
+height:53px;
+/* background:url(https://i.imgur.com/Lsug9s7.jpg);
+*/
+float:left;
+background-position:center;
+background:#32BCE5;
+}
+.payment-con-med{
+width:990px;
+float:left;
+/* background:url(https://i.imgur.com/E2yJ3hA.jpg);
+*/
+padding:0 20px;
+}
+.payment-con-bottom{
+width:990px;
+float:left;
+padding:10px 0;
+/* background:url(https://i.imgur.com/rbU7l2I.jpg);
+*/
+}
+.payment-con h2{
+color:white;
+padding:0;
+margin:0;
+text-align:center;
+font-family: 'Caveat', cursive;
+font-weight:normal;
+margin-top:10px;
+}
+.payment-con p{
+font-family:sans-serif;
+padding-left:10px;
+font-size:18px;
+line-height:1.5;
+text-align:justify;
+}
+</style>
+<div class="payment-con">	<div class="payment-con-top">	<h2>Payment</h2>	</div>
+<div class="payment-con-med">
+<p>	We accept PayPal payment <br>
+ We may also accept if any eBay policy permitted payment methods.<br>
+ Our payment is expected within 7 days after the end of each auction. If the payment is not received on time, your item may be re-listed or we will report to eBay as an unpaid item.	</p>
+</div>
+<div class="payment-con-bottom"></div>
+</div>
+<div class="payment-con">	<div class="payment-con-top">	<h2>Shipping Service</h2>	</div>
+<div class="payment-con-med">
+<p>	If you need immediate shipping, we offer expedited shipping at extra cost.<br>
+ We offer Registered Mail of US$ 6.00 (Not insured and track able). Additional items US$ 1.00 Delivery within 15-30 business days for International Delivery.<br>
+ (To Norway, Italy & France up to 8 weeks)<br>
+ The buyer is full responsible for any import customs duties and taxes in his country. We do not have any control over these duties, taxes & etc,<br>
+ FedEx US$ 35.00 (Insurance included up to $100). Delivery with in 3-5 business days after the shipment.	</p>
+</div>
+<div class="payment-con-bottom"></div>
+</div>
+<div class="payment-con">	<div class="payment-con-top">	<h2>Combine</h2>	</div>
+<div class="payment-con-med">
+<p>	You can combine your item(s) in one single parcel to save shipping cost starting from the date of your first win until 7 days later.<br>
+ $1.00 Handling for each additional item.<br>
+ Please do not make any single payments if you want to combine. Single payments paid with shipping fee will ship immediately.	</p>
+</div>
+<div class="payment-con-bottom"></div>
+</div>
+<div class="payment-con">	<div class="payment-con-top">	<h2>Customer Service</h2>	</div>
+<div class="payment-con-med">
+<p>	 We do not monitor our emails for security reason, so you will not receive any response.<br>
+ But we regularly monitor our eBay messages through eBay. Please contact us (send an email) via your eBay item 'contact seller' link for faster service.	</p>
+</div>
+<div class="payment-con-bottom"></div>
+</div>
+<div class="payment-con">	<div class="payment-con-top">	<h2>Handling Time</h2>	</div>
+<div class="payment-con-med">
+<p>	We will usually ship within 1 business days after we receive the complete payment.	</p>
+</div>
+<div class="payment-con-bottom"></div>
+</div>
+<div class="payment-con">	<div class="payment-con-top">	<h2>Other Important Note</h2>	</div>
+<div class="payment-con-med">
+<p>	Weight and size of gemstone may still vary slightly from piece to piece due to difference in calibration of weighing and measuring scales.<br>
+ Color may not appear exactly as in real life due to variation between computer monitor resolution and lights.	</p>
+</div>
+<div class="payment-con-bottom"></div>
+</div>
+<div class="payment-con">	<div class="payment-con-top">	<h2>How to easy Return?</h2>	</div>
+<div class="payment-con-med">
+<p>	Any item may be returned for refund within 14 days of receipt.<br>
+ There is No Restocking Fees!<br>
+ We never ask any questions, whatsoever!!<br>
+ If for any reason you are not satisfied, please return the item and receive a FULL REFUND of the winning price!!!<br>
+ Item(s) must be returned in original condition.<br>
+ Please inform us the reason of your dissatisfaction from your eBay item via 'contact seller' link. Damaged item(s) will not be accepted.<br>
+ For USA customers, please ship it via USPS first class mail with required shipping insurance.<br>
+ International customer, please ship via Registered Mail only.<br>
+ The refund process will take 3 - 5 business days. Shipping and insurance charges are non-refundable.	</p>
+</div>
+<div class="payment-con-bottom"></div>
+</div>
+<style type="text/css">
+.image-con{
+float:left;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+}
+</style>
+<div class="image-con">	<img src="https://i.imgur.com/aEPXH0Z.png">	</div>
+<style type="text/css">
+.my-logo-con{
+width:100%;
+float:left;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+}
+</style>
+<div class="my-logo-con">	<div style="width:100%;background-image: repeating-linear-gradient(90deg, rgb(95, 152, 225) 0px, rgb(95, 152, 225) 10px,rgb(115, 164, 229) 10px, rgb(115, 164, 229) 20px,rgb(135, 175, 233) 20px, rgb(135, 175, 233) 30px,rgb(214, 222, 250) 30px, rgb(214, 222, 250) 40px,rgb(174, 199, 242) 40px, rgb(174, 199, 242) 50px,rgb(155, 187, 238) 50px, rgb(155, 187, 238) 60px,rgb(194, 210, 246) 60px, rgb(194, 210, 246) 70px);display:flex;justify-content:center;align-items:center;flex-wrap:wrap;border-radius:5px;">
+<p style="color:white;font-family:sans-serif;text-transform:uppercase;font-weight:bold;font-size:20px;padding:0;margin:0;margin-right:20px;">designed by : </p>
+<img src="https://i.imgur.com/7VPoKnX.png" style="width:150px;">	</div>
+</div>	</div>
+</body>
